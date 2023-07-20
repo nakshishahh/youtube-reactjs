@@ -18,7 +18,7 @@ const Feed = () => {
   },[selectedCategory])
   return (
     <Stack sx={{ flexDirection:{ sx:
-      "column" , md:"row"}}}>
+      "column" , md:"row"}, backgroundColor: "#000"}}>
         <Box sx={{height :{ sx: "auto" , md:"92vh"} , borderRight: "1px solid #3d3d3d" , px:{sx : 0, md: 2} }}>
            <SideBar 
            selectedCategory={selectedCategory}
@@ -33,7 +33,7 @@ const Feed = () => {
         <Typography variant='h4' fontWeight="bold" mb={2} sx={{
           color: "white"
         }}>
-          {selectedCategory} <span style={{ color: "#F31503"}}>vidoes</span>
+          {selectedCategory} <span style={{ color: "#FC1503"}}>vidoes</span>
         </Typography>
 
         <Videos videos={videos}/>
@@ -42,4 +42,4 @@ const Feed = () => {
   )
 }
 
-export default Feed
+export default Feed;

@@ -17,27 +17,29 @@ const ChannelCard = ({channelDetail , marginTop}) => {
         height : "326px",
         margin: "auto",
         marginTop,
+        
+        
 
      }}
     >
         <Link to={`/channel/${channelDetail?.id?.channelId}`}>
             <CardContent sx={{
-                display: "felx" , flexDirection:"column" , justifyContent:"center" , textAlign: "center" , color: "#fff"
+                display: "flex" , flexDirection:"column" , justifyContent:"center" , textAlign: "center" , color: "#000" 
             }}>
                 <CardMedia
                 image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
                 alt={channelDetail?.snippet?.title}
                 sx={{ borderRadius: "50%" , height: "180px" , width: "180px" , mb: 2 ,
-                border: "1px solid #e3e3e3" }}
+                border: "1px solid #e3e3e3" , backgroundColor: "black" }}
                 />
-                <Typography variant='h6'>
+                <Typography variant='h6' sx = {{color:"gray"}}>
                     {channelDetail?.snippet?.title}
                     <CheckCircle sx={{ fontSize: 14 , color: "gray" , ml : "5px"}} />
 
                 </Typography>
                 {channelDetail?.statistics?.subscriberCount && (
-                   <Typography>
-                    {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()} Subscribers
+                   <Typography sx={{ fontSize: '14px', color: 'gray' , ml: '5px'}}>
+                    {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString('en-US')} Subscribers
                    </Typography> 
                 )}
 
@@ -49,4 +51,4 @@ const ChannelCard = ({channelDetail , marginTop}) => {
   )
 }
 
-export default ChannelCard
+export default ChannelCard;

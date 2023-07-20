@@ -11,6 +11,7 @@ const SideBar = ({selectedCategory ,setSelectedCategory }) => (
       overflowY: "auto" ,
       height : { sx: "auto" ,  md: "95%"} , 
       flexDirection : {md : "column"},
+  
     }}>
 
       {categories.map((category)=>(
@@ -33,4 +34,4 @@ const SideBar = ({selectedCategory ,setSelectedCategory }) => (
   )
 
 
-export default SideBar
+export default SideBar;

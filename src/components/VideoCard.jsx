@@ -7,7 +7,8 @@ const VideoCard = ( {video : {id: { videoId} , snippet}}) => {
     
   return (
     <Card sx={{ width : {xs:"100%",sm : "358px" , md : "320px"  },
-    boxShadow: "none" , borderRadius: 0
+    boxShadow: "none" , borderRadius: 0 ,
+    backgroundColor: "#000", 
     }}>
      <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
      <CardMedia 
@@ -17,10 +18,10 @@ const VideoCard = ( {video : {id: { videoId} , snippet}}) => {
       xs: "100%",
       sm: "358px",
       md: "320px"
-     }, height: 180}} 
+     }, height: 180, backgroundColor: "#000"}}
      />
      </Link> 
-     <CardContent  sx={{ backgroundColor: "#1e1e1e" , 
+     <CardContent  sx={{ backgroundColor: "#000" , 
      height: "106px"}}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
             <Typography variant='subtitle1' fontWeight="bold" color="#FFF">
@@ -39,4 +40,4 @@ const VideoCard = ( {video : {id: { videoId} , snippet}}) => {
   )
 }
 
-export default VideoCard
+export default VideoCard;
